@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>Física Computacional</title>
+</head>
+<body>
+
+    <nav>
+
+        <div class="muvs">
+            <a href="../quedaCalc/queda.html"><div id="muv">Queda Livre</div></a>
+            <a href="../lancHzCalc/lancamentoHz.html"><div id="muv">Lançamento Horizontal</div></a>
+            <a href="#"><div id="muv">Lançamento Vertical</div></a>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <h1>Física Computacional</h1>
+
+        <div class="campoPergunta">
+
+            <p id="perguntaEl">Mirela está treinando sua manchete para um importante campeonato de vôlei, onde, no meio da manobra, a bola atinge uma altura de 5 metros. Considerando que a aceleração gravitacional vale 10 m/s², determine o tempo de queda e a velocidade que a bola volta para o braço de Mirela.</p>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <h2 class="muvName">Lançamento Vertical</h2>
+
+        <div class="estatisticas">
+
+            <div class="propriedades">
+                
+                <h2>Altura</h2>
+                <input type="number" placeholder="Altura" id="alturaInput"> (m)
+
+                <h2>V₀ Vertical</h2>
+                <input type="number" placeholder="Altura" id="vyInput"> (m/s)
+
+                <h2>Gravidade</h2>
+                <input type="number" placeholder="Gravidade" id="gravidadeInput"> (m/s²)
+
+            </div>
+            
+            <div class="resultado">
+
+                <h2>Tempo de queda: </h2>
+                <p id="tempoDeQueda">0.00s</p>
+
+                <h2>Alcance Horizontal: </h2>
+                <p id="alcanceHz">0.00m</p>
+
+                <h2>Alcance Vertical: </h2>
+                <p id="alcanceVtc">0.00m</p>
+
+                <h2>Velocidade final: </h2>
+                <p id="veloFinal">0.00m/s</p>
+
+                <div class="extraOpts">
+
+                    <h2>Opções extra:</h2>
+
+                    <h2>Velocidade HZ: </h2>
+                    <p id="veloHz">0.00m/s</p>
+
+                    <h2>Velocidade VTC: </h2>
+                    <p id="veloVtc">0.00m/s</p>
+
+                </div>
+
+                <button id="botaoCalcular">Calcular</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="lancamentoVtc.js"></script>
+</body>
+</html>
