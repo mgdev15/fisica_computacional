@@ -1,3 +1,9 @@
+@property --angle{ 
+    syntax: "<angle>"; 
+    initial-value: 0deg; 
+    inherits: false;
+}
+
 *{
     box-sizing: border-box;
 }
@@ -17,6 +23,7 @@ body{
     display: flex;
     justify-content: space-around; 
     background-color: white;
+    animation: fadeUp 1s ease-in-out;
 }
 
 .muvs a{
@@ -33,7 +40,7 @@ body{
 
 #muv:hover{
     cursor: pointer;
-    background-color: rgb(255, 196, 196);
+    background-color: rgb(196, 224, 255);
 }
 
 h1{
@@ -44,6 +51,7 @@ h1{
     backdrop-filter: blur(4px);
     background-color: rgba(45, 143, 255, 0.397);
     color: white;
+    animation: fadeUp 1s ease-in-out;
 }
 
 .campoPergunta{
@@ -56,6 +64,7 @@ h1{
     font-size: 1.2em;
     font-family: "DM Sans";
     background-color: rgb(255, 253, 242);
+    animation: fadeIn 2s ease-in-out;
 }
 
 .campoPergunta p{
@@ -83,14 +92,43 @@ h1{
 
 .muvName{
     background-color: rgb(3, 31, 9);
-    border-radius: 10px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
     padding: 10px;
     max-width: fit-content;
     margin: 50px auto 0px;
     color: rgb(255, 255, 255);
     font-size: 2.1em;
+    position: relative;
+}
+
+.muvName::after, .muvName::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background-image: conic-gradient(
+    from var(--angle),
+    #3794ff,     
+    #26ff93, 
+    #ffd631,
+    #ff5c33,
+    #499eff
+    );
+    z-index: -1;
+    padding: 1px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        --angle: 360deg;
+    }
 }
 
 .estatisticas{
@@ -184,6 +222,10 @@ h1{
 
 @media screen and (max-width: 470px){
 
+    .campoPergunta{
+        margin: 25px;
+    }
+
     .campoPergunta p{
         font-size: 0.8em;
     }
@@ -194,6 +236,30 @@ h1{
 
     .estatisticas{
         flex-direction: column;
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity: .1;
+        transform: translateY(40%);
+    }
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes fadeIn{
+
+    0%{
+        opacity: 0;
+        transform: translateX(-150%);
+    }
+    60%{
+        transform: translateX(10%);
     }
 
 }
