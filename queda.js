@@ -7,6 +7,10 @@ calcBtn.addEventListener("click", () => {
     const altura = Number(document.getElementById("alturaInput").value);
     const gravidade = Number(document.getElementById("gravidadeInput").value);
 
+    if(!altura || !gravidade){
+        return 0;
+    }
+
     const tempoDisplay = document.getElementById("tempoDeQueda");
 
     const tempo = Math.sqrt(2 * altura / gravidade); //TEMPO DE QUEDA
