@@ -1,6 +1,6 @@
 const calcBtn = document.getElementById("botaoCalcular");
 
-calcBtn.addEventListener("click", () => {
+function calcular(){
 
     const altura = Number(document.getElementById("alturaInput").value);
     const gravidade = Number(document.getElementById("gravidadeInput").value);
@@ -30,5 +30,17 @@ calcBtn.addEventListener("click", () => {
 
     veloHzDisplay.textContent = `${vx.toFixed(2)}m/s`;
     veloVtcDisplay.textContent = `${vy.toFixed(2)}m/s`;
+
+};
+
+calcBtn.addEventListener("click", calcular);
+
+document.addEventListener("keydown", event => {
+
+    const key = event.key.toLowerCase();
+
+    if(key === "enter"){
+        calcular();
+    }
 
 });
