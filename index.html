@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cal+Sans&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <title>Física Computacional - Queda Livre</title>
+</head>
+<body>
+
+    <nav>
+
+        <div class="muvs">
+            <a href="#"><div id="muv">Queda Livre</div></a>
+            <a href="lancHzCalc/lancamentoHz.html"><div id="muv">Lançamento Horizontal</div></a>
+            <a href="lancVtcCalc/lancamentoVtc.html"><div id="muv">Lançamento Vertical</div></a>
+        </div>
+
+    </nav>
+
+    <header>
+
+        <h1>Física Computacional</h1>
+
+        <div class="campoPergunta">
+
+            <p id="perguntaEl">Gustavo foi em um evento de paraquedismo, onde iria saltar de uma aeronave que está na altura de 10.000 metros, com g=10m/s². Em quanto tempo Gustavo chegará ao solo?</p>
+
+            <button id="proxBtn">Próxima questão</button>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <h2 class="muvName">Queda Livre</h2>
+
+        <div class="estatisticas">
+
+            <div class="propriedades">
+                
+                <h2>Altura</h2>
+                <input type="number" placeholder="Altura" id="alturaInput"> (m)
+
+                <h2>Gravidade</h2>
+                <input type="number" placeholder="Gravidade" id="gravidadeInput"> (m/s²)
+
+            </div>
+            
+            <div class="resultado">
+
+                <h2>Tempo de Queda: </h2>
+                <p id="tempoDeQueda">0.00s</p>
+
+                <button id="botaoCalcular">Calcular</button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <script type="module" src="queda.js"></script>
+</body>
+</html>
