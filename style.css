@@ -161,3 +161,39 @@ h1{
     padding: 5px;
     margin-bottom: 20px;
 }
+
+@media screen and (max-width: 570px){
+    
+    .muvs{
+        font-size: 0.8em;
+    }
+
+    h1{
+        font-size: 1.6em;
+    }
+
+    .muvName{
+        font-size: 1.7em;
+    }
+
+    .propriedades input{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 470px){
+
+    .campoPergunta p{
+        font-size: 0.8em;
+    }
+
+    .muvs{
+        display: block
+    }
+
+    .estatisticas{
+        flex-direction: column;
+    }
+
+}
