@@ -15,7 +15,7 @@ html{
 
 body{
     margin: 0;
-    background: url(./wpp.jpeg) top/cover no-repeat fixed;
+    background: url(public/wpp.jpeg) top/cover no-repeat fixed;
     font-family: 'Red Hat Display', 'Inter', 'DM Sans', 'Arial', 'sans-serif';
 }
 
