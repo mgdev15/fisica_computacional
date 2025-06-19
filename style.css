@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+    scrollbar-color: rgb(61, 177, 255) rgb(0, 0, 0);
+}
+
+body{
+    margin: 0;
+    background: url(./wpp.jpeg) top/cover no-repeat fixed;
+    font-family: 'Red Hat Display', 'Inter', 'DM Sans', 'Arial', 'sans-serif';
+}
+
+.muvs{
+    display: flex;
+    justify-content: space-around; 
+    background-color: white;
+}
+
+.muvs a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+
+#muv{
+    background-color: transparent;
+    padding: 20px;
+    transition: background-color .2s ease-in-out;
+}
+
+#muv:hover{
+    cursor: pointer;
+    background-color: rgb(255, 196, 196);
+}
+
+h1{
+    margin: 30px auto;
+    padding: 8px;
+    border-radius: 5px;
+    max-width: fit-content;
+    backdrop-filter: blur(4px);
+    background-color: rgba(45, 143, 255, 0.397);
+    color: white;
+}
+
+.campoPergunta{
+    margin: 0px auto 70px;
+    padding: 15px;
+    position: relative;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+    font-size: 1.2em;
+    font-family: "DM Sans";
+    background-color: rgb(255, 253, 242);
+}
+
+.campoPergunta p{
+    padding: 10px;
+    margin: 0px 50px;
+}
+
+#proxBtn{
+    padding: 8px;
+    position: absolute;
+    right: 10%;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 93, 93);
+    font-size: 0.8em;
+    font-weight: bold;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+
+#proxBtn:hover{
+    cursor: pointer;
+    background-color: rgb(32, 141, 99);
+    color: white;
+}
+
+.muvName{
+    background-color: rgb(3, 31, 9);
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 10px;
+    max-width: fit-content;
+    margin: 50px auto 0px;
+    color: rgb(255, 255, 255);
+    font-size: 2.1em;
+}
+
+.estatisticas{
+    max-width: fit-content;
+    margin: 0px auto 20px;
+    display: flex;
+    gap: 50px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.propriedades input{
+    padding: 3px;
+    font-size: 1.05em;
+    background-color: rgba(24, 94, 175, 0.795);
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.459);
+    border-radius: 5px;
+    outline: none;
+}
+
+.propriedades input::placeholder{
+    color: rgba(255, 255, 255, 0.726);
+}
+
+.resultado{
+    text-align: center;
+}
+
+.resultado p{
+    font-size: 1.4em;
+    font-family: "Inter";
+    text-align: center;
+}
+
+.resultado button{
+    padding: 10px 20px;
+    font-size: 1em;
+    font-family: "DM Sans";
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 102, 0);
+    color: white;
+}
+
+.resultado button:hover{
+    cursor: pointer;
+    background-color: rgb(255, 146, 73);
+}
+
+#tempoDeQueda{
+    color: rgb(0, 99, 5);
+}
+
+#alcanceHz, #alcanceVtc{
+    color: rgb(117, 106, 1);
+}
+
+#veloFinal{
+    color: rgb(153, 0, 0);
+}
+
+.extraOpts{
+    background-color: rgba(202, 202, 202, 0.541);
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
