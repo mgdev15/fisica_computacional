@@ -131,13 +131,17 @@ h1{
     }
 }
 
-.estatisticas{
+.info{
     max-width: fit-content;
     margin: 0px auto 20px;
-    display: flex;
-    gap: 50px;
     background-color: white;
     border-radius: 5px;
+    max-width: 565px;
+}
+
+.estatisticas{
+    display: flex;
+    gap: 50px;
     padding: 20px;
 }
 
@@ -146,7 +150,7 @@ h1{
     font-size: 1.05em;
     background-color: rgba(24, 94, 175, 0.795);
     color: white;
-    border: 1px solid rgba(0, 0, 0, 0.459);
+    border: 1px solid rgba(0, 0, 0, 0.199);
     border-radius: 5px;
     outline: none;
 }
@@ -171,7 +175,6 @@ h1{
     font-family: "DM Sans";
     font-weight: bold;
     border: none;
-    border-radius: 5px;
     background-color: rgb(255, 102, 0);
     color: white;
 }
@@ -179,6 +182,16 @@ h1{
 .resultado button:hover{
     cursor: pointer;
     background-color: rgb(255, 146, 73);
+}
+
+.aviso{
+    padding: 3px;
+    background-color: grey;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.801);
+    margin-bottom: 0;
 }
 
 #tempoDeQueda{
@@ -236,6 +249,22 @@ h1{
 
     .estatisticas{
         flex-direction: column;
+    }
+
+    .info{
+        margin: 0px 35px;
+    }
+    
+    .aviso{
+        font-size: 0.9em;
+    }
+
+}
+
+@media screen and (max-width: 370px){
+
+    .aviso{
+        font-size: 0.8em;
     }
 
 }
