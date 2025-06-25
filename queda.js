@@ -7,7 +7,7 @@ function calcular(){
     const altura = Number(document.getElementById("alturaInput").value);
     const gravidade = Number(document.getElementById("gravidadeInput").value);
 
-    if(!altura || !gravidade){
+    if(altura <= 0 || gravidade <= 0){
         return 0;
     }
 
@@ -30,7 +30,6 @@ document.addEventListener("keydown", event => {
 
 });
 
-
 let perguntaIdx = 0;
 const pgElement = document.getElementById("perguntaEl");
 const proxBtn = document.getElementById("proxBtn");
@@ -48,5 +47,3 @@ proxBtn.addEventListener("click", () => {
     }
 
 });
-
-
