@@ -8,6 +8,10 @@ function calcular(){
     const gravidade = Number(document.getElementById("gravidadeInput").value);
     const veloHzInput = Number(document.getElementById("vxInput").value);
 
+    if(!gravidade){
+        return 0;
+    }
+
     const tempoDisplay = document.getElementById("tempoDeQueda");
     const alcanceHzDisplay = document.getElementById("alcanceHz");
     const alcanceVtcDisplay = document.getElementById("alcanceVtc");
@@ -24,7 +28,7 @@ function calcular(){
     const alcanceVtc = gravidade * Math.pow(tempo, 2) / 2; //ALCANCE VERTICAL
     alcanceVtcDisplay.textContent = `${alcanceVtc.toFixed(2)}m`;
 
-    const vx = alcanceHz / tempo; //VELOCIDADE HORIZONTAL
+    const vx = veloHzInput //VELOCIDADE HORIZONTAL
     const vy = gravidade * tempo; //VELOCIDADE VERTICAL
 
     const veloFinal = Math.sqrt(Math.pow(veloHzInput, 2) + Math.pow(vy, 2)); //VELOCIDADE FINAL

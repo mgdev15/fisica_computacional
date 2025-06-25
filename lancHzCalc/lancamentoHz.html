@@ -40,50 +40,60 @@
 
         <h2 class="muvName">Lançamento Horizontal</h2>
 
-        <div class="estatisticas">
-
-            <div class="propriedades">
-                
-                <h2>Altura</h2>
-                <input type="number" placeholder="Altura" id="alturaInput"> (m)
-
-                <h2>V₀ Horizontal</h2>
-                <input type="number" placeholder="Altura" id="vxInput"> (m/s)
-
-                <h2>Gravidade</h2>
-                <input type="number" placeholder="Gravidade" id="gravidadeInput"> (m/s²)
-
-            </div>
+        <div class="info">
             
-            <div class="resultado">
+            <div class="estatisticas">
 
-                <h2>Tempo de queda: </h2>
-                <p id="tempoDeQueda">0.00s</p>
+                <div class="propriedades">
+                    
+                    <h2>Altura</h2>
+                    <input type="number" placeholder="Altura" id="alturaInput"> (m)
 
-                <h2>Alcance Horizontal: </h2>
-                <p id="alcanceHz">0.00m</p>
+                    <h2>V₀ Horizontal</h2>
+                    <input type="number" placeholder="V₀ Horizontal" id="vxInput"> (m/s)
 
-                <h2>Alcance Vertical: </h2>
-                <p id="alcanceVtc">0.00m</p>
+                    <h2>Gravidade</h2>
+                    <input type="number" placeholder="Gravidade" id="gravidadeInput"> (m/s²)
 
-                <h2>Velocidade final: </h2>
-                <p id="veloFinal">0.00m/s</p>
+                </div>
+                
+                <div class="resultado">
 
-                <div class="extraOpts">
+                    <h2>Tempo de queda: </h2>
+                    <p id="tempoDeQueda">0.00s</p>
 
-                    <h2>Opções extra:</h2>
+                    <h2>Alcance Horizontal: </h2>
+                    <p id="alcanceHz">0.00m</p>
 
-                    <h2>Velocidade HZ: </h2>
-                    <p id="veloHz">0.00m/s</p>
+                    <h2>Alcance Vertical: </h2>
+                    <p id="alcanceVtc">0.00m</p>
 
-                    <h2>Velocidade VTC: </h2>
-                    <p id="veloVtc">0.00m/s</p>
+                    <h2>Velocidade final: </h2>
+                    <p id="veloFinal">0.00m/s</p>
+
+                    <div class="extraOpts">
+
+                        <h2>Opções extra:</h2>
+
+                        <h2>Velocidade HZ: </h2>
+                        <p id="veloHz">0.00m/s</p>
+
+                        <h2>Velocidade VTC: </h2>
+                        <p id="veloVtc">0.00m/s</p>
+
+                    </div>
+
+                    <button id="botaoCalcular">Calcular</button>
 
                 </div>
 
-                <button id="botaoCalcular">Calcular</button>
-
             </div>
+                
+            <p class="aviso">
+                *Não use pontos ou vírgulas para indicar valores maiores que 999 nos campos númericos (Altura, Gravidade, Velocidade, etc).
+                <br>
+                Exemplo: [Altura: 10.000] ❌ —> [Altura: 10000] ✅
+            </p>
 
         </div>
 
