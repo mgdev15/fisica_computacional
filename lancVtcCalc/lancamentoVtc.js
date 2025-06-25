@@ -10,26 +10,26 @@ function calcular(){
         return 0;
     }
 
-    const a = gravidade / 2;
+    const a = gravidade / 2; //FÓRMULA PARA TEMPO DE QUEDA PÓS LANÇAMENTO VERTICAL
     const b = -veloVtcInput;
     const c = -altura;
 
-    const t1 = (-b + (Math.sqrt((b * b) - 4 * a * c))) / (2 * a);
-    const t2 = (-b - (Math.sqrt((b * b) - 4 * a * c))) / (2 * a);
+    const t1 = (-b + (Math.sqrt((b * b) - 4 * a * c))) / (2 * a); //RESULTADO 1 - BHASKARA
+    const t2 = (-b - (Math.sqrt((b * b) - 4 * a * c))) / (2 * a); //RESULTADO 2- BHASKARA
 
     let bhskResultado = null;
 
-    if(t1 < 0 && t2 < 0){
+    if(t1 < 0 && t2 < 0){ //SE AMBOS FOREM NEGATIVOS, RESULTADO = 0
         bhskResultado = 0;
     }
-    else if(t1 < 0 && t2 > 0){
+    else if(t1 < 0 && t2 > 0){ //SE T2 FOR POSITIVO E T1 FOR NEGATIVO, RESULTADO = T2
         bhskResultado = t2;
     }
-    else if(t1 > 0 && t2 < 0){
+    else if(t1 > 0 && t2 < 0){ //SE T1 FOR POSITIVO E T2 FOR NEGATIVO, RESULTADO = T1
         bhskResultado = t1;
     }
-    else if(t1 > 0 && t2 > 0){
-        bhskResultado = `Δ > 0`;
+    else if(t1 > 0 && t2 > 0){ //SE AMBOS FOREM POSITIVOS, RESULTADO = Δ > 0
+        tempoDisplay.textContent = `Δ > 0`;
     }
 
     const tempoDisplay = document.getElementById("tempoDeQueda");
