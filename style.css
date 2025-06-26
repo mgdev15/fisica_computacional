@@ -125,12 +125,6 @@ h1{
     animation: spin 1.4s linear infinite;
 }
 
-@keyframes spin{
-    to{
-        --angle: 360deg;
-    }
-}
-
 .info{
     max-width: fit-content;
     margin: 0px auto 20px;
@@ -157,6 +151,20 @@ h1{
 
 .propriedades input::placeholder{
     color: rgba(255, 255, 255, 0.726);
+}
+
+.propriedades #unidadeMedida{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    padding: 4px 0px;
+}
+
+#unidadeMedida option{
+    background-color: white;
+    color: black;
 }
 
 .resultado{
@@ -231,6 +239,10 @@ h1{
         width: 100%;
     }
 
+    .propriedades #unidadeMedida{
+        margin-top: 5px;
+    }
+
 }
 
 @media screen and (max-width: 470px){
@@ -291,4 +303,10 @@ h1{
         transform: translateX(10%);
     }
 
+}
+
+@keyframes spin{
+    to{
+        --angle: 360deg;
+    }
 }
