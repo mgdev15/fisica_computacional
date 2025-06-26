@@ -1,11 +1,30 @@
 import { perguntasQueda } from "./perguntasQueda.js";
 
+let alturaPlaceholder = document.getElementById("alturaInput");
+const unidadeMedida = document.getElementById("unidadeMedida");
+
+unidadeMedida.addEventListener("change", () => {
+
+    if(unidadeMedida.value === "centimetros"){
+        alturaPlaceholder.placeholder = "Altura (cm)";
+    }
+    else{
+        alturaPlaceholder.placeholder = "Altura (m)";
+    }
+
+});
+
 const calcBtn = document.getElementById("botaoCalcular");
 
 function calcular(){
 
-    const altura = Number(document.getElementById("alturaInput").value);
+    let altura = Number(document.getElementById("alturaInput").value);
+    const unidade = unidadeMedida.value;
     const gravidade = Number(document.getElementById("gravidadeInput").value);
+
+    if(unidade === "centimetros"){
+        altura = altura / 100;
+    }
 
     if(altura <= 0 || gravidade <= 0){
         return 0;
