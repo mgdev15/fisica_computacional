@@ -1,10 +1,29 @@
+let alturaPlaceholder = document.getElementById("alturaInput");
+const unidadeMedida = document.getElementById("unidadeMedida");
+
+unidadeMedida.addEventListener("change", () => {
+
+    if(unidadeMedida.value === "centimetros"){
+        alturaPlaceholder.placeholder = "Altura (cm)";
+    }
+    else{
+        alturaPlaceholder.placeholder = "Altura (m)";
+    }
+
+});
+
 const calcBtn = document.getElementById("botaoCalcular");
 
 function calcular(){
 
-    const altura = Number(document.getElementById("alturaInput").value);
+    let altura = Number(document.getElementById("alturaInput").value);
+    const unidade = unidadeMedida.value;
     const gravidade = Number(document.getElementById("gravidadeInput").value);
     const veloVtcInput = Number(document.getElementById("vyInput").value);
+
+    if(unidade === "centimetros"){
+        altura = altura / 100;
+    }
 
     if(!gravidade){
         return 0;
@@ -28,8 +47,8 @@ function calcular(){
     else if(t1 > 0 && t2 < 0){ //SE T1 FOR POSITIVO E T2 FOR NEGATIVO, RESULTADO = T1
         bhskResultado = t1;
     }
-    else if(t1 > 0 && t2 > 0){ //SE AMBOS FOREM POSITIVOS, RESULTADO = Δ > 0
-        tempoDisplay.textContent = `Δ > 0`;
+    else if(t1 > 0 && t2 > 0){ //SE AMBOS FOREM POSITIVOS, RESULTADO = Δ > 0 (Considera-se o maior número)
+        bhskResultado = Math.max(t1, t2);
     }
 
     const tempoDisplay = document.getElementById("tempoDeQueda");
