@@ -1,12 +1,31 @@
 import { perguntasLancamentoHz } from "./perguntasLancamentoHz.js";
 
+let alturaPlaceholder = document.getElementById("alturaInput");
+const unidadeMedida = document.getElementById("unidadeMedida");
+
+unidadeMedida.addEventListener("change", () => {
+
+    if(unidadeMedida.value === "centimetros"){
+        alturaPlaceholder.placeholder = "Altura (cm)";
+    }
+    else{
+        alturaPlaceholder.placeholder = "Altura (m)";
+    }
+
+});
+
 const calcBtn = document.getElementById("botaoCalcular");
 
 function calcular(){
 
-    const altura = Number(document.getElementById("alturaInput").value);
+    let altura = Number(document.getElementById("alturaInput").value);
+    const unidade = unidadeMedida.value;
     const gravidade = Number(document.getElementById("gravidadeInput").value);
     const veloHzInput = Number(document.getElementById("vxInput").value);
+    
+    if(unidade === "centimetros"){
+        altura = altura / 100;
+    }
 
     if(!gravidade){
         return 0;
