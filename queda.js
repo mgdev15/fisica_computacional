@@ -31,9 +31,13 @@ function calcular(){
     }
 
     const tempoDisplay = document.getElementById("tempoDeQueda");
+    const veloFinalDisplay = document.getElementById("veloFinal");
 
     const tempo = Math.sqrt(2 * altura / gravidade); //TEMPO DE QUEDA
     tempoDisplay.textContent = `${tempo.toFixed(2)}s`;
+
+    const veloFinal = gravidade * tempo; //VELOCIDADE FINAL
+    veloFinalDisplay.textContent = `${veloFinal.toFixed(2)}m/s`;
 
 };
 
