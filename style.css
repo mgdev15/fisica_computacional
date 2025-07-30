@@ -18,7 +18,7 @@ html{
 
 body{
     margin: 0;
-    background: url(/public/page_bg.png) center/cover no-repeat fixed;
+    background: url(/page_bg.png) center/cover no-repeat fixed;
     color: white;
     font-family: 'Red Hat Display', 'Inter', 'DM Sans', 'Arial', 'sans-serif';
 }
