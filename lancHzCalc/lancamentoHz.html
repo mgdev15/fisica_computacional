@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/5e94bc91f4.js" crossorigin="anonymous"></script>
     <link rel="icon" href="../public/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,7 +13,9 @@
 </head>
 <body>
 
-    <nav>
+    <nav>        
+
+        <img src="/public/favicon.png">
 
         <div class="muvs">
             <a href="../index.html"><div id="muv">Queda Livre</div></a>
@@ -24,13 +27,18 @@
 
     <header>
 
-        <h1>Física Computacional</h1>
+        <h1 class="hero-title">Física Computacional</h1>
+        <h2 class="queda-title">Lançamento Horizontal</h2>
 
         <div class="campoPergunta">
 
-            <p id="perguntaEl">Fernando lança horizontalmente uma bolinha de gude do alto de uma escadaria de 9 metros para seu amigo que está no final da escada. A bolinha é lançada com velocidade 7 m/s. Qual será a velocidade que a bolinha chegará ao amigo de Fernando? [g = 10m/s²]</p>
+            <img id="perguntaEl">
 
-            <button id="proxBtn">Próxima questão</button>
+            <button id="proxBtn">
+                <i class="fa-solid fa-atom"></i> 
+                Chamar questão 
+                <i class="fa-solid fa-atom"></i>
+            </button>
 
         </div>
 
@@ -38,14 +46,12 @@
 
     <main>
 
-        <h2 class="muvName">Lançamento Horizontal</h2>
+        <div class="estatisticas">
 
-        <div class="info">
+            <div class="propriedades">
             
-            <div class="estatisticas">
+                <div class="propriedade">
 
-                <div class="propriedades">
-                    
                     <h2>Altura</h2>
                     <input type="number" placeholder="Altura (m)" id="alturaInput">
                     <select id="unidadeMedida">
@@ -53,53 +59,74 @@
                         <option value="centimetros">cm</option>
                     </select>
 
+                </div>
+
+                <div class="propriedade">
                     <h2>V₀ Horizontal</h2>
                     <input type="number" placeholder="V₀ Horizontal" id="vxInput"> (m/s)
+                </div>
 
+                <div class="propriedade">
                     <h2>Gravidade</h2>
                     <input type="number" placeholder="Gravidade" id="gravidadeInput"> (m/s²)
-
                 </div>
+
+            </div>
+
+            <div class="resultados">
                 
                 <div class="resultado">
-
-                    <h2>Tempo de queda: </h2>
+                    <h2>Tempo de Queda: </h2>
                     <p id="tempoDeQueda">0.00s</p>
+                </div>
 
+                <div class="resultado">
                     <h2>Alcance Horizontal: </h2>
                     <p id="alcanceHz">0.00m</p>
+                </div>
 
+                <div class="resultado">
                     <h2>Alcance Vertical: </h2>
                     <p id="alcanceVtc">0.00m</p>
+                </div>
 
-                    <h2>Velocidade final: </h2>
+                <div class="resultado">
+                    <h2>Velocidade Final: </h2>
                     <p id="veloFinal">0.00m/s</p>
+                </div>
 
-                    <div class="extraOpts">
+                <div class="extraOpts">
 
-                        <h2>Opções extra:</h2>
+                    <h2>Opções extra:</h2>
 
+                    <div class="opcao">
                         <h2>Velocidade HZ: </h2>
                         <p id="veloHz">0.00m/s</p>
-
-                        <h2>Velocidade VTC: </h2>
-                        <p id="veloVtc">0.00m/s</p>
-
                     </div>
 
-                    <button id="botaoCalcular">Calcular</button>
+                    <div class="opcao">
+                        <h2>Velocidade VTC: </h2>
+                        <p id="veloVtc">0.00m/s</p>
+                    </div>
 
                 </div>
 
             </div>
-                
-            <p class="aviso">
-                *Não use pontos ou vírgulas para indicar valores maiores que 999 nos campos númericos (Altura, Gravidade, Velocidade, etc).
-                <br>
-                Exemplo: [Altura: 10.000] ❌ —> [Altura: 10000] ✅
-            </p>
 
         </div>
+
+        <button id="botaoCalcular">Calcular</button>
+            
+        <p class="aviso">
+            Não use pontos ou vírgulas para indicar valores maiores que <span style="color: rgb(118, 255, 91)">999</span> nos campos númericos (Altura, Gravidade, Velocidade...)
+            <br>
+            <br>
+            Exemplo:
+            <br>
+            Altura: 10.000 <i class="fa-solid fa-xmark" style="color: red"></i>
+            <br>
+            Altura: 10000 <i class="fa-solid fa-check" style="color: rgb(0, 196, 0)"></i>
+        </p>
 
     </main>
 

@@ -1,4 +1,9 @@
-import { perguntasLancamentoHz } from "./perguntasLancamentoHz.js";
+const perguntasLancamentoHz = [
+
+    {source: "../assets/lancHz_assets/spaceship_lancHz1.png"},
+    {source: "../assets/lancHz_assets/spaceship_lancHz2.png"},
+
+]
 
 let alturaPlaceholder = document.getElementById("alturaInput");
 const unidadeMedida = document.getElementById("unidadeMedida");
@@ -79,11 +84,12 @@ proxBtn.addEventListener("click", () => {
     perguntaIdx++;
 
     if(perguntasLancamentoHz.length > perguntaIdx){
-        pgElement.textContent = perguntasLancamentoHz[perguntaIdx].enunciado;
+        pgElement.src = perguntasLancamentoHz[perguntaIdx].source;
+        proxBtn.innerHTML = `<i class="fa-solid fa-atom"></i> Próxima questão <i class="fa-solid fa-atom"></i>` ;
     }
     else{
         perguntaIdx = 0;
-        pgElement.textContent = perguntasLancamentoHz[perguntaIdx].enunciado;
+        pgElement.src = perguntasLancamentoHz[perguntaIdx].source;
     }
 
 });
