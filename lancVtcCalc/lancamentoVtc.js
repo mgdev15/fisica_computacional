@@ -1,3 +1,9 @@
+const perguntasLancamentoVtc = [
+
+    {source: "../assets/lancVtc_assets/spaceship_lancVtc1.png"}
+
+]
+
 let alturaPlaceholder = document.getElementById("alturaInput");
 const unidadeMedida = document.getElementById("unidadeMedida");
 
@@ -86,6 +92,25 @@ document.addEventListener("keydown", event => {
 
     if(key === "enter"){
         calcular();
+    }
+
+});
+
+let perguntaIdx = 0;
+const pgElement = document.getElementById("perguntaEl");
+const proxBtn = document.getElementById("proxBtn");
+
+proxBtn.addEventListener("click", () => {
+
+    perguntaIdx++;
+
+    if(perguntasLancamentoVtc.length > perguntaIdx){
+        pgElement.src = perguntasLancamentoVtc[perguntaIdx].source;
+        proxBtn.innerHTML = `<i class="fa-solid fa-atom"></i> Próxima questão <i class="fa-solid fa-atom"></i>` ;
+    }
+    else{
+        perguntaIdx = 0;
+        pgElement.src = perguntasLancamentoVtc[perguntaIdx].source;
     }
 
 });
