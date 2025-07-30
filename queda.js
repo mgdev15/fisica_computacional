@@ -1,4 +1,9 @@
-import { perguntasQueda } from "./perguntasQueda.js";
+const perguntasQueda = [
+
+    {source: "./assets/queda_assets/spaceship_queda1.png"},
+    {source: "./assets/queda_assets/spaceship_queda2.png"},
+
+]
 
 let alturaPlaceholder = document.getElementById("alturaInput");
 const unidadeMedida = document.getElementById("unidadeMedida");
@@ -62,11 +67,12 @@ proxBtn.addEventListener("click", () => {
     perguntaIdx++;
 
     if(perguntasQueda.length > perguntaIdx){
-        pgElement.textContent = perguntasQueda[perguntaIdx].enunciado;
+        pgElement.src = perguntasQueda[perguntaIdx].source;
+        proxBtn.innerHTML = `<i class="fa-solid fa-atom"></i> Próxima questão <i class="fa-solid fa-atom"></i>` ;
     }
     else{
         perguntaIdx = 0;
-        pgElement.textContent = perguntasQueda[perguntaIdx].enunciado;
+        pgElement.src = perguntasQueda[perguntaIdx].source;
     }
 
 });
