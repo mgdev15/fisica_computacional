@@ -36,7 +36,7 @@ nav img{
     border-radius: 50%;
     border: none;
     width: 60px;
-    animation: spin 3s linear infinite;
+    animation: rodar 3s linear infinite;
 }
 
 nav .muvs{
@@ -91,10 +91,17 @@ nav #muv:hover{
 }
 
 #perguntaEl{
+    display: none;
+}
+
+#perguntaEl.displaying{
     padding: 20px;
+    display: block;
+    animation: questaoAparecer 2.6s ease forwards;
 }
 
 #proxBtn{
+    margin-top: 30px;
     padding: 15px 25px; 
     border: none;
     border-radius: 999px;
@@ -116,7 +123,7 @@ nav #muv:hover{
 
 .fa-solid.fa-atom{
     color: rgb(181, 240, 255);
-    animation: spin 5s linear infinite;
+    animation: rodar 5s linear infinite;
 }
 
 /********* CÁLCULOS/RESULTADOS *********/
@@ -224,58 +231,85 @@ nav #muv:hover{
 
 /********* RESPONSIVIDADE *********/
 
-@media screen and (max-width: 570px){
+@media screen and (max-width: 768px){
 
-    h1{
-        font-size: 1.6em;
-    }
-
-    .propriedades input{
-        width: 100%;
-    }
-
-    .propriedades{
-        margin-top: 5px;
-    }
-
-}
-
-@media screen and (max-width: 470px){
-
-    .campoPergunta{
-        margin: 25px;
-    }
-
-    .campoPergunta p{
-        font-size: 0.8em;
-    }
-
-    .estatisticas{
+    nav{
         flex-direction: column;
     }
 
-    .info{
-        margin: 0px 35px;
+    nav img{
+        display: block;
+        margin: 15px auto 45px auto;
     }
-    
-    .aviso{
-        font-size: 0.9em;
+
+    nav .muvs{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero-title{
+        margin-top: 20px;
+        font-size: 3em;
+    }
+
+    .queda-title, .lanc-hz-title, .lanc-vtc-title{
+        font-size: 1.3em;
+    }
+
+    #perguntaEl{
+        width: 450px;
+    }
+
+    #proxBtn{
+        font-size: 0.7em;
     }
 
 }
 
-@media screen and (max-width: 370px){
+@media screen and (max-width: 601px){
 
-    .aviso{
-        font-size: 0.8em;
+    .hero-title{
+        margin-top: 20px;
+        font-size: 2.3em;
+    }
+
+    .queda-title, .lanc-hz-title, .lanc-vtc-title{
+        font-size: 1.15em;
+    }
+
+    #perguntaEl{
+        width: 370px;
+    }
+
+    #proxBtn{
+        font-size: 0.65em;
+    }
+
+    .estatisticas{
+        font-size: 0.85em;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 371px){
+
+    #perguntaEl{
+        width: 315px;
     }
 
 }
 
 /********* ANIMAÇÕES *********/
 
-@keyframes spin{
+@keyframes rodar{
     to{
         transform: rotate(360deg);
+    }
+}
+
+@keyframes questaoAparecer{
+    from{
+        transform: translateX(-400%);
     }
 }
