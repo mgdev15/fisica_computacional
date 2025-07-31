@@ -44,6 +44,7 @@ nav .muvs{
     align-items: center;
     justify-content: center;
     gap: 35px;
+    animation: fadeDown 1.2s ease;
 }
 
 nav #muv{
@@ -59,23 +60,33 @@ nav #muv:hover{
 /********* TÍTULO E SUBTÍTULO *********/
 
 .hero-title{
-    margin-top: 30px;
+    margin-top: 25px;
     color: white;
     font-size: 4.4em;
     font-family: 'Red Hat Display';
     font-weight: black;
     text-align: center;
     letter-spacing: 2px;
+    animation: fadeUp 4.5s ease;
 }
 
-.queda-title, .lanc-hz-title, .lanc-vtc-title{
-    margin: 20px auto;
-    font-size: 1.65em;
+.subtitle-box{
+    margin: 25px auto;
     padding: 5px 20px;
     border-radius: 10px;
     backdrop-filter: blur(6px);
-    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.705);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.705);
     max-width: fit-content;
+}
+
+.subtitle-box h2{
+    white-space: nowrap;
+    width: 100%;
+    scale: 1;
+    overflow: hidden;
+    font-size: 1.65em;
+    animation: fadeText 2.5s ease, piscarBorda 2s step-end 2 forwards;
+    border-right: 1px solid white;
 }
 
 /********* QUESTÕES *********/
@@ -95,13 +106,12 @@ nav #muv:hover{
 }
 
 #perguntaEl.displaying{
-    padding: 20px;
     display: block;
     animation: questaoAparecer 2.6s ease forwards;
 }
 
 #proxBtn{
-    margin-top: 30px;
+    margin: 50px;
     padding: 15px 25px; 
     border: none;
     border-radius: 999px;
@@ -132,7 +142,7 @@ nav #muv:hover{
     display: flex;
     justify-content: center;
     gap: 50px;
-    margin: 80px auto 10px auto;
+    margin: 20px auto 10px auto;
     padding: 40px 20px;
     border-radius: 20px;
     background-color: rgba(99, 114, 124, 0.226);
@@ -252,7 +262,7 @@ nav #muv:hover{
         font-size: 3em;
     }
 
-    .queda-title, .lanc-hz-title, .lanc-vtc-title{
+    .subtitle-box h2{
         font-size: 1.3em;
     }
 
@@ -273,7 +283,7 @@ nav #muv:hover{
         font-size: 2.3em;
     }
 
-    .queda-title, .lanc-hz-title, .lanc-vtc-title{
+    .subtitle-box h2{
         font-size: 1.15em;
     }
 
@@ -306,6 +316,42 @@ nav #muv:hover{
     to{
         transform: rotate(360deg);
     }
+}
+
+@keyframes fadeDown{
+    from{
+        opacity: 0;
+        transform: translateY(-35%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity: .1;
+        transform: translateY(15%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeText{
+    from{
+        width: 0;
+        scale: 1.15;
+    }
+}
+
+@keyframes piscarBorda{
+    
+    50%{border-right: white;}
+    100%{border-right: transparent;}
+
 }
 
 @keyframes questaoAparecer{
