@@ -65,14 +65,20 @@ const proxBtn = document.getElementById("proxBtn");
 proxBtn.addEventListener("click", () => {
 
     perguntaIdx++;
+    window.scrollTo(0, 245);
+
+    pgElement.classList.remove('displaying');
+    pgElement.offsetHeight;
 
     if(perguntasQueda.length > perguntaIdx){
         pgElement.src = perguntasQueda[perguntaIdx].source;
+        pgElement.classList.add('displaying');
         proxBtn.innerHTML = `<i class="fa-solid fa-atom"></i> Próxima questão <i class="fa-solid fa-atom"></i>` ;
     }
     else{
         perguntaIdx = 0;
         pgElement.src = perguntasQueda[perguntaIdx].source;
+        pgElement.classList.add('displaying');
     }
 
 });
